@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <Container className="p-5">
+    <Container>
       <HeaderContainer>
         <h3># Hackernews Feed</h3>
         <IconsContainer>
@@ -54,7 +54,7 @@ function App() {
           </SpinnerContainer>
         ) : (
           <ListGroup>
-            {stories.map((e) => (
+            {stories.map((e, index) => (
               <Story
                 key={e.data.id}
                 title={e.data.title}
@@ -93,8 +93,7 @@ const IconsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex: 0.1;
-
+  width: 70px;
   > span {
     cursor: pointer;
 
@@ -104,6 +103,10 @@ const IconsContainer = styled.div`
         color: #ebebe3;
       }
     }
+  }
+
+  @media only screen and (max-width: 600px) {
+    display: none;
   }
 `;
 

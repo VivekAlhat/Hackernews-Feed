@@ -15,3 +15,13 @@ body {
   background-color: #3f3f44 !important;
   color: #e3e3e3 !important;
 }
+
+.container {
+  padding: 2rem 3rem !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 1rem !important;
+  }
+}
